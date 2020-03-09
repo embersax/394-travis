@@ -1,6 +1,6 @@
 import React from "react";
 import { Delete, Table, Button, Box, Heading } from "rbx";
-// import { deleteItem, updateItemNumber } from "./firebaseHelpers";
+import { deleteItem, updateItemNumber } from "./firebaseHelpers";
 
 const getTotalQuantity = neededBy => {
   if (neededBy === undefined) {
