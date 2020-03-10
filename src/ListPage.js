@@ -31,7 +31,7 @@ const useSelection = () => {
   return [selected, clearSelected, toggle];
 };
 
-const ListPage = ({ propItems, user, house }) => {
+const ListPage = ({ propItems, user, house, testFn }) => {
   const [productName, setProductName] = useState("");
   const [unit, setUnit] = useState("");
   const [selected, clearSelected, toggle] = useSelection();
@@ -84,6 +84,7 @@ const ListPage = ({ propItems, user, house }) => {
                     placeholder="Eggs"
                     value={productName}
                     onChange={handleProductChange}
+                    data-testid="product-input"
                   />
                 </Control>
                 <Control expanded>

@@ -12,13 +12,17 @@ const getTotalQuantity = neededBy => {
   );
 };
 
-const ItemList = ({ items, user, selectedState, house }) => {
+const ItemList = ({ items, user, selectedState, house, testFn }) => {
 
   // const handleNoteChange = (event, data) => {
   //   if (data && house) {
   //     updatingNotes(house, data, event.target.value);
   //   }
   // };
+  console.log(items, 'items')
+  console.log(user, 'user')
+  console.log(selectedState, 'selected')
+  console.log(house, 'house')
 
   const needsItem = (neededBy, name) => {
     const names = Object.values(neededBy).map(person => person.name);
@@ -33,7 +37,7 @@ const ItemList = ({ items, user, selectedState, house }) => {
   }
   return (
     <Box>
-      <Heading>tap to add items to cart</Heading>
+      <Heading data-testid="heading">tap to add items to cart</Heading>
       <Table fullwidth hoverable>
         <Table.Head>
           <Table.Row>
