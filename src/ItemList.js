@@ -12,7 +12,7 @@ const getTotalQuantity = neededBy => {
   );
 };
 
-const ItemList = ({ items, user, selectedState, house, testFn }) => {
+const ItemList = ({ items, user, selectedState, house }) => {
 
   // const handleNoteChange = (event, data) => {
   //   if (data && house) {
@@ -37,7 +37,7 @@ const ItemList = ({ items, user, selectedState, house, testFn }) => {
   }
   return (
     <Box>
-      <Heading data-testid="heading">tap to add items to cart</Heading>
+      <Heading >tap to add items to cart</Heading>
       <Table fullwidth hoverable>
         <Table.Head>
           <Table.Row>
