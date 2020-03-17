@@ -12,7 +12,7 @@ const getTotalQuantity = neededBy => {
   );
 };
 
-const ItemList = ({ items, user, selectedState, house }) => {
+const ItemList = ({ items, user, selectedState, house, testFn }) => {
 
   // const handleNoteChange = (event, data) => {
   //   if (data && house) {
@@ -70,7 +70,7 @@ const ItemList = ({ items, user, selectedState, house }) => {
                       key={`${data.productName}-${person.name}`}
                     >
                       {person.name.split(' ')[0]} ({person.quantity})
-                        <br />
+                      <br />
                     </React.Fragment>
                   ))
                   : ""}

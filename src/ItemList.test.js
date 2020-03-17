@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import ListPage from './ListPage';
+
 
 test('ListPage should be updated on change', () => {
     const testFn = jest.fn();
@@ -15,12 +15,8 @@ test('ListPage should be updated on change', () => {
     const productInput = getByTestId('product-unit-test');
     console.log(productInput)
     fireEvent.change(productInput, {
-        target: { value: 'piece' },
+        target: { value: 'dozen' },
     });
-    expect(testFn).toBeCalledWith('piece');
-    // fireEvent.change(productInput, {
-    //     target: { value: 'finished' },
-    // });
-    // expect(testFn).toBeCalledWith('finished');
-    // expect(testFn).toHaveBeenCalledTimes(2);
+    expect(testFn).toBeCalledWith('dozen');
+
 })
